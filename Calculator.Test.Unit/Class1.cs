@@ -70,7 +70,13 @@ namespace Calculator.Test.Unit
         [Test]
         public void Power_minus2_and_3_is_minus8()
         {
-            Assert.That(uut.Power(-2,3), Is.EqualTo(-8));
+            Assert.That(uut.Power(-2, 3), Is.EqualTo(-8));
+        }
+
+        [Test]
+        public void Divide_4_med_2()
+        {
+            Assert.That(uut.Divide(4, 2), Is.EqualTo(2));
         }
     }
 }

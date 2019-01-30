@@ -30,7 +30,12 @@ namespace Hand_testing_calculator
         {
             double x_raised = Math.Pow(x, exp);
             return x_raised;
+        }
 
+        public double Divide(double a, double b)
+        {
+            double resultat = a/b;
+            return resultat;
         }
     }
 }
