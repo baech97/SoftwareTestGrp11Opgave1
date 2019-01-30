@@ -32,5 +32,10 @@ namespace Hand_testing_calculator
             return x_raised;
 
         }
+
+        public void Clear()
+        {
+
+        }
     }
 }
