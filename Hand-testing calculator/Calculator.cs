@@ -51,5 +51,10 @@ namespace Hand_testing_calculator
                 return 0;
             }
         }
+
+        public void Clear()
+        {
+
+        }
     }
 }
