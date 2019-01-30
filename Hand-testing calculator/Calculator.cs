@@ -54,7 +54,7 @@ namespace Hand_testing_calculator
 
         public void Clear()
         {
-
+            Accumulator.Equals(null);
         }
     }
 }
