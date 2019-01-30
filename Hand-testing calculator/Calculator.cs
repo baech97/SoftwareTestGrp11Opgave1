@@ -36,7 +36,20 @@ namespace Hand_testing_calculator
             double x_raised = Math.Pow(x, exp);
             Accumulator = x_raised;
             return x_raised;
+        }
 
+        public double Divide(double a, double b)
+        {
+           
+            try
+            {
+                double resultat = a / b;
+                return resultat;
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
         }
     }
 }
