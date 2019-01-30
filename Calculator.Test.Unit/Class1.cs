@@ -13,6 +13,7 @@ namespace Calculator.Test.Unit
     public class Class1
     {
         private Hand_testing_calculator.Calculator uut;
+        
         [SetUp]
         public void SetUp()
         {
@@ -71,6 +72,14 @@ namespace Calculator.Test.Unit
         public void Power_minus2_and_3_is_minus8()
         {
             Assert.That(uut.Power(-2,3), Is.EqualTo(-8));
+        }
+
+        [Test]
+        public void Accumulator_last_calculation_is_4()
+        {
+            uut.Add(2, 2);
+            Assert.That(uut.Accumulator, Is.EqualTo(4));
+
         }
     }
 }
