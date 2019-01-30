@@ -34,8 +34,16 @@ namespace Hand_testing_calculator
 
         public double Divide(double a, double b)
         {
-            double resultat = a/b;
-            return resultat;
+           
+            try
+            {
+                double resultat = a / b;
+                return resultat;
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
         }
     }
 }
