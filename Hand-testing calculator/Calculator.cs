@@ -55,7 +55,5 @@ namespace Hand_testing_calculator
         {
             Accumulator = 0;
         }
-
-        //test
     }
 }
