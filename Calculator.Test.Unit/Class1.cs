@@ -80,18 +80,25 @@ namespace Calculator.Test.Unit
             Assert.That(uut.Divide(4, 2), Is.EqualTo(2));
         }
 
-        //[Test]
-        //public void Divide_4_and_0()
-        //{
-        //    Assert.That(uut.Divide(4, 0), Is.EqualTo(0));
-        //}
+        [Test]
+        public void Divide_4_and_0()
+        {
+            Assert.That(uut.Divide(4, 0), Is.EqualTo(0));
+        }
 
         [Test]
         public void Accumulator_last_calculation_is_4()
         {
             uut.Add(2, 2);
             Assert.That(uut.Accumulator, Is.EqualTo(4));
+        }
 
+        [Test]
+
+        public void Accumulator_last_calculation_is_10()
+        {
+            uut.Divide(20, 2);
+            Assert.That(uut.Accumulator, Is.EqualTo(10));
         }
     }
 }
