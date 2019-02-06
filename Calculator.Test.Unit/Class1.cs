@@ -108,5 +108,25 @@ namespace Calculator.Test.Unit
             Assert.That(uut.Accumulator, Is.EqualTo(10));
         }
 
+        [Test]
+        public void Accumulator_last_calculation_is_zero()
+        {
+            uut.Subtract(0, 0);
+            Assert.That(uut.Accumulator, Is.EqualTo(0));
+        }
+
+        [Test]
+        public void Accumulator_last_calculation_is_negative()
+        {
+            uut.Subtract(10, 30);
+            Assert.That(uut.Accumulator, Is.EqualTo(-20));
+        }
+
+        [Test]
+        public void Clear_sets_accumulator_to_null()
+        {
+            uut.Clear();
+            Assert.That(uut.Accumulator, Is.EqualTo(0));
+        }
     }
 }
