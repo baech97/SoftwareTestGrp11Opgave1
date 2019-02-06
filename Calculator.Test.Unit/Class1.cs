@@ -123,8 +123,24 @@ namespace Calculator.Test.Unit
         }
 
         [Test]
-        public void Clear_sets_accumulator_to_null()
+        public void Clear_sets_accumulator_to_zero()
         {
+            uut.Clear();
+            Assert.That(uut.Accumulator, Is.EqualTo(0));
+        }
+
+        [Test]
+        public void Clear_multiply_accumulator_is_zero()
+        {
+            uut.Multiply(2, 2);
+            uut.Clear();
+            Assert.That(uut.Accumulator, Is.EqualTo(0));
+        }
+
+        [Test]
+        public void Clear_power_accumulator_is_zero()
+        {
+            uut.Power(3, 3);
             uut.Clear();
             Assert.That(uut.Accumulator, Is.EqualTo(0));
         }
