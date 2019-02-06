@@ -45,20 +45,10 @@ namespace Hand_testing_calculator
             {
                 throw new DivideByZeroException();
             }
-
-
-
-            try
-            {
-                double resultat = a / b;
-                Accumulator = resultat;
-                return resultat;
-            }
-            catch (DivideByZeroException e)
-            {
-                return 0;
-                Accumulator = 0;
-            }
+            
+            double resultat = a / b;
+            Accumulator = resultat;
+            return resultat;
         }
 
         public void Clear()
