@@ -103,10 +103,24 @@ namespace Calculator.Test.Unit
         }
 
         [Test]
-        public void Accumulator_()
+        public void Accumulator_last_calculation_is_zero()
         {
-            uut.Divide(2, 0);
-            Assert.That(uut.Accumulator, Is.EqualTo(DivideByZeroException()));
+            uut.Subtract(0, 0);
+            Assert.That(uut.Accumulator, Is.EqualTo(0));
+        }
+
+        [Test]
+        public void Accumulator_last_calculation_is_negative()
+        {
+            uut.Subtract(10, 30);
+            Assert.That(uut.Accumulator, Is.EqualTo(-20));
+        }
+
+        [Test]
+        public void Clear_sets_accumulator_to_null()
+        {
+            uut.Clear();
+            Assert.That(uut.Accumulator, Is.EqualTo(0));
         }
     }
 }
