@@ -100,5 +100,12 @@ namespace Calculator.Test.Unit
             uut.Divide(20, 2);
             Assert.That(uut.Accumulator, Is.EqualTo(10));
         }
+
+        [Test]
+        public void Accumulator_()
+        {
+            uut.Divide(2, 0);
+            Assert.That(uut.Accumulator, Is.EqualTo(DivideByZeroException()));
+        }
     }
 }
